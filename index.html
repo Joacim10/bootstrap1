@@ -54,7 +54,7 @@
               <!-- SHOWCASE -->
               <div class="row my-4 py-4">
                   <div class="col-lg-7 my-md-4 pr-lg-4 py-4">
-                      <h1 class="headline my-md-4 pt-md-4">
+                      <h1 id="fadeInLeft1" class="headline my-md-4 pt-md-4">
                       Creative Way to Showcase Your App
                       </h1>
                       <span class="headline-body pr-md-4 my-md-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply</span>
@@ -69,7 +69,7 @@
                       </div>
                   </div>
                   <div class="col-lg-5 pb-4">
-                      <img class="pb-4 mb-4" src="../assets/Mobile.png" alt="dfgdfgd" width="100%" height="auto">
+                      <img id="fadeInRight1" class="pb-4 mb-4" src="../assets/Mobile.png" alt="dfgdfgd" width="100%" height="auto">
                   </div>
               </div>
           </div>
@@ -90,12 +90,12 @@
 
           <!-- EASY TO SEARCH 1 -->
           <div class="row mt-4">
-              <div class="col-12 text-center text-lg-left col-lg-6 d-none d-md-block">
+              <div id="fadeInLeft2" class="col-12 text-center text-lg-left col-lg-6 d-none d-md-block">
                   <img src="../assets/iPhone.png" alt="">
               </div>
               <div class="col-12 text-dark col-lg-6 mt-4">
                   <div class="small-label"><span>About Us</span></div>
-                  <h1 class="info-head my-3">
+                  <h1 id="fadeInRight2" class="info-head my-3">
                   Easy To Search Your Items By This App
                   </h1>
                   <h6 class="info-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently</h6>
@@ -115,7 +115,7 @@
                   <div class="text-dark col-lg-7 mt-4 pt-4">
                       <div>
                           <div class="small-label"><span>Features</span></div>
-                          <h1 class="info-head my-3 pr-sm-5">
+                          <h1 id="fadeInLeft3" class="info-head my-3 pr-sm-5">
                           Easy To Search Your Items By This App
                           </h1>
                           <h6 class="info-body mt-3 pr-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h6>
@@ -155,7 +155,7 @@
                       </div>
                   </div>
                   <div class="col-lg-5 mt-4 text-right my-auto p-md-0">
-                      <img class="p-0 Mobile2" src="../assets/Mobile2.png" alt="dfgdfgd" width="100%" height="">
+                      <img id="fadeInRight3" class="p-0 Mobile2" src="../assets/Mobile2.png" alt="dfgdfgd" width="100%" height="">
                   </div>
               </div>
           </div>
@@ -196,22 +196,25 @@
                   Lorem Ipsum has been the industry's
               </h6>
           </div>
-          <div class="row text-dark my-4 text-center">
+
+
+          <div id="counting" class="row text-dark my-4 text-center">
               <div class="col-12 col-sm-6 col-lg-3">
-                  <div class="text-secondary my-2">+ 1430</div>
+                  <div class="counter text-secondary my-2" data-from="25" data-to="1430" data-speed="1000"></div>
                   <div class="text-body">Clients</div>
               </div>
               <div class="col-12 col-sm-6 col-lg-3">
-                  <div class="text-secondary my-2">+ 2430</div>
+                  <div class="counter text-secondary my-2" data-from="25" data-to="2430" data-speed="1500"></div>
+
                   <div class="text-body">Beneficiaries</div>
               </div>
               <div class="col-12 col-sm-6 col-lg-3">
-                  <div class="text-secondary my-2">+ 1430</div>
-                  <div class="text-body">Positive reviews</div>
+                <div class="counter text-secondary my-2" data-from="25" data-to="1430" data-speed="1000"></div>
+                <div class="text-body">Positive reviews</div>
               </div>
               <div class="col-12 col-sm-6 col-lg-3">
-                  <div class="text-secondary my-2">+ 10.430</div>
-                  <div class="text-body">Downloads</div>
+                <div id="counter-with-commas" class="counter text-secondary my-2" data-from="25" data-to="10430" data-speed="2000"></div>
+                <div class="text-body">Downloads</div>
               </div>
           </div>
       </div>
@@ -291,7 +294,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
-    <script src="jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js"></script>
+
     <script src="js/script.js"></script>
 
   </body>

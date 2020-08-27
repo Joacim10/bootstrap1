@@ -264,6 +264,70 @@ nav {
         opacity: .75;
     }
 }
+
+.counter {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#fadeInLeft1, #fadeInLeft2, #fadeInLeft2, #fadeInRight1, #fadeInRight2, #fadeInRight3 {
+    opacity: 0;
+}
+
+
+.fadeInLeft {
+    opacity: 1 !important;
+    animation-name: fadeInLeft;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 1s;
+} 
+
+.fadeInRight {
+    opacity: 1 !important;
+    animation-name: fadeInRight;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 1s;
+} 
+
+@keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+ @keyframes fadeInRight {
+    0% {
+       opacity: 0;
+       transform: translateX(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+.counter::before {
+    content: '+ ';
+}
   
 
 /* MEDIA QUERIES */
