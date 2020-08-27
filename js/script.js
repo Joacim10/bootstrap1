@@ -15,19 +15,16 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
-//SLIDING IN FROM SIDE
-function callbackFunc(entries, observer)
-{
+//FADING IN FROM SIDES
+function callbackFunc(entries) {
   entries.forEach(entry => {
     element = document.getElementById(entry.target.id)
 
-    console.log(entry.target.id)
-
     if (entry.isIntersecting) {
-      if (entry.target.id.includes('Right')) element.classList.add('fadeInRight')
-      else if (entry.target.id.includes('Left')) element.classList.add('fadeInLeft')
-      else if (entry.target.id.includes('Down')) element.classList.add('fadeInDown')
-      else if (entry.target.id.includes('Up')) element.classList.add('fadeInUp')
+      if (entry.target.id.includes('Right')) element.classList.add('fadeInRight', 'fadeIn')
+      else if (entry.target.id.includes('Left')) element.classList.add('fadeInLeft', 'fadeIn')
+      else if (entry.target.id.includes('Down')) element.classList.add('fadeInDown', 'fadeIn')
+      else if (entry.target.id.includes('Up')) element.classList.add('fadeInUp', 'fadeIn')
       else if (entry.target.id === 'counting') startCounting()
     }
   });
@@ -36,19 +33,28 @@ function callbackFunc(entries, observer)
 let options = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.4
+    threshold: 0.3
   };
 
 let observer = new IntersectionObserver(callbackFunc, options);
 
-observer.observe(document.getElementById('fadeInLeft1'));
+let fadeElements = ['fadeInLeft1', 'fadeInRight1', 'fadeInUp1', 'fadeInDown1', 'fadeInLeft2', 'fadeInRight2', 'fadeInUp2', 'fadeInLeft3', 'fadeInRight3', 'fadeInUp3', 'counting']
+
+fadeElements.forEach(id => {
+  observer.observe(document.getElementById(id))
+})
+/* observer.observe(document.getElementById('fadeInLeft1'));
 observer.observe(document.getElementById('fadeInRight1'));
+observer.observe(document.getElementById('fadeInUp1'));
+observer.observe(document.getElementById('fadeInDown1'));
 observer.observe(document.getElementById('fadeInLeft2'));
 observer.observe(document.getElementById('fadeInRight2'));
+observer.observe(document.getElementById('fadeInUp2'));
 observer.observe(document.getElementById('fadeInLeft3'));
 observer.observe(document.getElementById('fadeInRight3'));
+observer.observe(document.getElementById('fadeInUp3'));
 observer.observe(document.getElementById('counting'));
-
+ */
 
 
 //CAROUSELS

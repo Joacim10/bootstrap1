@@ -282,25 +282,31 @@ nav {
 	}
 }
 
-#fadeInLeft1, #fadeInLeft2, #fadeInLeft2, #fadeInRight1, #fadeInRight2, #fadeInRight3 {
+#fadeInLeft1, #fadeInLeft2, #fadeInLeft3, #fadeInRight1, #fadeInRight2, #fadeInRight3, #fadeInUp1, #fadeInUp2, #fadeInUp3, #fadeInDown1 {
     opacity: 0;
 }
 
-
-.fadeInLeft {
+.fadeIn {
     opacity: 1 !important;
-    animation-name: fadeInLeft;
     animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
+}
+
+.fadeInLeft { 
+    animation-name: fadeInLeft;
 } 
 
 .fadeInRight {
-    opacity: 1 !important;
     animation-name: fadeInRight;
-    animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-    animation-duration: 1s;
+} 
+
+.fadeInDown {
+    animation-name: fadeInDown;
+} 
+
+.fadeInUp {
+    animation-name: fadeInUp;
 } 
 
 @keyframes fadeInLeft {
@@ -312,12 +318,34 @@ nav {
        opacity: 1;
        transform: translateX(0);
     }
- }
+}
 
  @keyframes fadeInRight {
     0% {
        opacity: 0;
        transform: translateX(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+ @keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+ @keyframes fadeInUp {
+    0% {
+       opacity: 0;
+       transform: translateY(20px);
     }
     100% {
        opacity: 1;
