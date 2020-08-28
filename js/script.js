@@ -1,9 +1,11 @@
 //COUNTING NUMBERS
+var hasCounted = false;
+
 function startCounting() {
   $('.counter').countTo()
   //ADDING A "." AFTER COUNTING
-  
   setTimeout(delayedFunction, 2500)
+  hasCounted = true;
 }
 
 function delayedFunction() {
@@ -25,7 +27,7 @@ function callbackFunc(entries) {
       else if (entry.target.id.includes('Left')) element.classList.add('fadeInLeft', 'fadeIn')
       else if (entry.target.id.includes('Down')) element.classList.add('fadeInDown', 'fadeIn')
       else if (entry.target.id.includes('Up')) element.classList.add('fadeInUp', 'fadeIn')
-      else if (entry.target.id === 'counting') startCounting()
+      else if (entry.target.id === 'counting' && hasCounted === false) startCounting()
     }
   });
 }
@@ -38,7 +40,8 @@ let options = {
 
 let observer = new IntersectionObserver(callbackFunc, options);
 
-let fadeElements = ['fadeInLeft1', 'fadeInRight1', 'fadeInUp1', 'fadeInDown1', 'fadeInLeft2', 'fadeInRight2', 'fadeInUp2', 'fadeInLeft3', 'fadeInRight3', 'fadeInUp3', 'counting']
+let fadeElements = ['fadeInLeft1', 'fadeInRight1', 'fadeInUp1', 'fadeInDown1', 'fadeInLeft2', 'fadeInRight2', 'fadeInUp2', 
+'fadeInLeft3', 'fadeInRight3', 'fadeInUp3', 'fadeInUp4', 'counting']
 
 fadeElements.forEach(id => {
   observer.observe(document.getElementById(id))
