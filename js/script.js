@@ -46,18 +46,6 @@ let fadeElements = ['fadeInLeft1', 'fadeInRight1', 'fadeInUp1', 'fadeInDown1', '
 fadeElements.forEach(id => {
   observer.observe(document.getElementById(id))
 })
-/* observer.observe(document.getElementById('fadeInLeft1'));
-observer.observe(document.getElementById('fadeInRight1'));
-observer.observe(document.getElementById('fadeInUp1'));
-observer.observe(document.getElementById('fadeInDown1'));
-observer.observe(document.getElementById('fadeInLeft2'));
-observer.observe(document.getElementById('fadeInRight2'));
-observer.observe(document.getElementById('fadeInUp2'));
-observer.observe(document.getElementById('fadeInLeft3'));
-observer.observe(document.getElementById('fadeInRight3'));
-observer.observe(document.getElementById('fadeInUp3'));
-observer.observe(document.getElementById('counting'));
- */
 
 
 //CAROUSELS
